@@ -10,12 +10,10 @@ Regras aplicadas:
 ### Exemplo aplicado na tabela `clientes`:
 
 Tabela: clientes
-+------------+----------------+-------------+-------------------+-------------------+
-| id\_cliente | nome\_cliente   | cpf\_cliente | telefone\_cliente  | email\_cliente     |
-+------------+----------------+-------------+-------------------+-------------------+
-| 1          | João Silva     | 12345678900 | 999999999         | joao@email.com    |
-| 2          | Maria Souza    | 09876543211 | 888888888         | maria@email.com   |
-+------------+----------------+-------------+-------------------+-------------------+
+| id\_cliente | nome\_cliente  | cpf\_cliente  | telefone\_cliente | email\_cliente   |
+|-------------|----------------|---------------|-------------------|------------------|
+| 1           | João Silva     | 12345678900   | 999999999         | joao@email.com   |
+| 2           | Maria Souza    | 09876543211   | 888888888         | maria@email.com  |
 
 ---
 
@@ -28,20 +26,16 @@ Regras aplicadas:
 ### Exemplo aplicado às tabelas `livros` e `editora`:
 
 Tabela: livros
-+----------+---------------------+--------+------------+--------------------+
-| id\_livro | titulo              | edicao | id\_editora | ano\_publicacao     |
-+----------+---------------------+--------+------------+--------------------+
-| 1        | A Vida              | 1      | 1          | 2020               |
-| 2        | O Mundo             | 2      | 2          | 2021               |
-+----------+---------------------+--------+------------+--------------------+
+| id\_livro   | titulo        | edicao | id\_editora | ano\_publicacao |
+|-------------|---------------|--------|-------------|-----------------|
+| 1           | A Vida        | 1      | 1           | 2020            |
+| 2           | O Mundo       | 2      | 2           | 2021            |
 
 Tabela: editora
-+------------+-------------------+------------------+-------------------+
-| id\_editora | nome\_editora      | telefone\_editora | email\_editora     |
-+------------+-------------------+------------------+-------------------+
-| 1          | Editora X         | 111111111        | editora@x.com     |
-| 2          | Editora Y         | 222222222        | editora@y.com     |
-+------------+-------------------+------------------+-------------------+
+| id\_editora | nome\_editora | telefone\_editora | email\_editora  |
+|-------------|---------------|-------------------|-----------------|
+| 1           | Editora X     | 111111111         | editora@x.com   |
+| 2           | Editora Y     | 222222222         | editora@y.com   |
 
 ---
 
@@ -54,20 +48,16 @@ Regras aplicadas:
 ### Exemplo aplicado às tabelas `clientes` e `emprestimos`:
 
 Tabela: clientes
-+------------+----------------+-------------+-------------------+-------------------+
-| id\_cliente | nome\_cliente   | cpf\_cliente | telefone\_cliente  | email\_cliente     |
-+------------+----------------+-------------+-------------------+-------------------+
-| 1          | João Silva     | 12345678900 | 999999999         | joao@email.com    |
-| 2          | Maria Souza    | 09876543211 | 888888888         | maria@email.com   |
-+------------+----------------+-------------+-------------------+-------------------+
+| id\_cliente | nome\_cliente  | cpf\_cliente  | telefone\_cliente | email\_cliente   |
+|-------------|----------------|---------------|-------------------|------------------|
+| 1           | João Silva     | 12345678900   | 999999999         | joao@email.com   |
+| 2           | Maria Souza    | 09876543211   | 888888888         | maria@email.com  |
 
 Tabela: emprestimos
-+----------------+------------+-------------+-----------+-------------------+-------------------------+-------------------+
-| id\_emprestimo | id\_cliente | id\_exemplar | status    | data\_emprestimo    | data\_devolucao\_prevista  | data\_devolucao    |
-+----------------+------------+-------------+-----------+-------------------+-------------------------+-------------------+
-| 1              | 1          | 2           | ativo     | 2024-10-01         | 2024-10-10              | NULL              |
-| 2              | 2          | 3           | finalizado| 2024-09-20         | 2024-09-27              | 2024-09-25        |
-+----------------+------------+-------------+-----------+-------------------+-------------------------+-------------------+
+| id\_emprestimo | id\_cliente | id\_exemplar | status   | data\_emprestimo | data\_devolucao\_prevista | data\_devolucao |
+|----------------|------------|--------------|----------|------------------|--------------------------|-----------------|
+| 1              | 1          | 2            | ativo    | 2024-10-01       | 2024-10-10               | NULL            |
+| 2              | 2          | 3            | finalizado| 2024-09-20       | 2024-09-27               | 2024-09-25      |
 
 ---
 
