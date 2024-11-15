@@ -6,8 +6,16 @@ Regras aplicadas:
 1. Todas as tabelas têm colunas e linhas organizadas.
 2. Cada célula contém apenas um valor (atomicidade).
 3. Cada linha é única e identificada por uma chave primária.
+4. Cada coluna armazene valores do mesmo tipo de dado.
 
-### Exemplo aplicado na tabela `clientes`:
+### Como foi aplicado:
+- Todas as tabelas foram estruturadas para atender à 1FN, pois:
+  - Não há grupos repetitivos ou valores compostos.
+  - Cada célula contém apenas um valor.
+  - Cada linha é identificada por uma chave primária.
+
+### Exemplo:
+Na tabela `clientes`, os dados de contato (telefone e e-mail) são separados, e o `cpf_cliente` é único:
 
 Tabela: clientes
 | id\_cliente | nome\_cliente  | cpf\_cliente  | telefone\_cliente | email\_cliente   |
@@ -21,9 +29,14 @@ Tabela: clientes
 
 Regras aplicadas:
 1. O banco está na 1FN.
-2. Todos os atributos não-chave dependem integralmente da chave primária.
+2. Todos os atributos não-chave dependem integralmente da chave primária (não pode haver dependência parcial).
 
-### Exemplo aplicado às tabelas `livros` e `editora`:
+### Como foi aplicado:
+- Não há dependências parciais em tabelas com chaves compostas, como `livro_tradutor`, `livro_autor` e `livro_genero`. Todos os atributos em tabelas associativas dependem exclusivamente da combinação das chaves primárias.
+- Campos como `id_editora` em `livros` referenciam a tabela `editora`, garantindo que as informações relacionadas à editora estejam normalizadas em sua própria tabela.
+
+### Exemplo:
+A tabela `livros` separa as informações da editora para evitar redundância:
 
 Tabela: livros
 | id\_livro   | titulo        | edicao | id\_editora | ano\_publicacao |
@@ -39,13 +52,18 @@ Tabela: editora
 
 ---
 
-## 3ª Forma Normal (3FN)
+## A 3ª Forma Normal (3FN)
 
 Regras aplicadas:
-1. O banco está na 2FN.
-2. Não há dependência transitiva entre atributos não-chave.
+1. O banco deve estar na 2FN.
+2. Nenhum atributo não-chave deve depender de outro atributo não-chave (eliminação de dependências transitivas).
 
-### Exemplo aplicado às tabelas `clientes` e `emprestimos`:
+### Como foi aplicado:
+- Na tabela `clientes`, as informações pessoais (e.g., nome, telefone) dependem apenas de `id_cliente`. Não há dependências transitivas.
+- Na tabela `livros`, os dados de `id_editora` apontam para a tabela `editora`. Os dados da editora (como nome e e-mail) não dependem do livro, eliminando dependências transitivas.
+
+### Exemplo:
+Dependências transitivas foram eliminadas nas tabelas relacionadas:
 
 Tabela: clientes
 | id\_cliente | nome\_cliente  | cpf\_cliente  | telefone\_cliente | email\_cliente   |
@@ -63,9 +81,9 @@ Tabela: emprestimos
 
 ## Considerações Finais
 
-1. **1FN**: As tabelas possuem dados atômicos, sem valores repetidos em células.
-2. **2FN**: Todos os atributos não-chave são dependentes da chave primária.
-3. **3FN**: Eliminação de dependências transitivas, garantindo que não existam atributos não-chave dependentes de outros atributos não-chave.
+1. **1FN**: Todos os atributos são atômicos e as tabelas possuem identificadores únicos.
+2. **2FN**: Atributos dependem integralmente das chaves primárias.
+3. **3FN**: Nenhum atributo depende transitivamente de outro atributo não-chave.
 
 Esses passos garantem que o banco de dados esteja devidamente normalizado, evitando redundâncias e anomalias de atualização.
 
