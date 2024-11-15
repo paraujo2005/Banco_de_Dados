@@ -11,7 +11,7 @@ Regras aplicadas:
 
 Tabela: clientes
 +-------------+-------------+------------+----------------+------------------+
-| id_cliente  | nome_cliente| cpf_cliente| telefone_cliente| email_cliente    |
+| id-cliente  | nome-cliente| cpf-cliente| telefone-cliente| email-cliente    |
 +-------------+-------------+------------+----------------+------------------+
 | 1           | João Silva  | 12345678900| 999999999      | joao@email.com   |
 | 2           | Maria Souza | 09876543211| 888888888      | maria@email.com  |
@@ -29,7 +29,7 @@ Regras aplicadas:
 
 Tabela: livros
 +----------+-------------+--------+------------+----------------+
-| id_livro | titulo      | edicao | id_editora | ano_publicacao |
+| id-livro | titulo      | edicao | id-editora | ano-publicacao |
 +----------+-------------+--------+------------+----------------+
 | 1        | Livro A     | 1      | 1          | 2020           |
 | 2        | Livro B     | 2      | 2          | 2019           |
@@ -37,7 +37,7 @@ Tabela: livros
 
 Tabela: editora
 +-----------+------------------+-----------------+----------------+
-| id_editora| nome_editora     | telefone_editora| email_editora  |
+| id-editora| nome-editora     | telefone-editora| email-editora  |
 +-----------+------------------+-----------------+----------------+
 | 1         | Editora Alpha    | 111111111       | alpha@email.com|
 | 2         | Editora Beta     | 222222222       | beta@email.com |
@@ -55,7 +55,7 @@ Regras aplicadas:
 
 Tabela: clientes
 +-------------+----------------+------------------+----------------+
-| id_cliente  | nome_cliente   | cpf_cliente      | telefone_cliente|
+| id-cliente  | nome-cliente   | cpf-cliente      | telefone-cliente|
 +-------------+----------------+------------------+----------------+
 | 1           | João Silva     | 12345678900      | 999999999       |
 | 2           | Maria Souza    | 09876543211      | 888888888       |
@@ -63,7 +63,7 @@ Tabela: clientes
 
 Tabela: emprestimos
 +-------------+-------------+-------------+----------------+
-| id_emprestimo| id_cliente | id_exemplar | status         |
+| id-emprestimo| id-cliente | id-exemplar | status         |
 +-------------+-------------+-------------+----------------+
 | 1           | 1           | 100         | ativo          |
 | 2           | 2           | 101         | finalizado     |
